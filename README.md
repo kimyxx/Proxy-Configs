@@ -27,6 +27,33 @@
 
 配置中引用的远程规则、模块和图标来自对应的原作者或开源项目。使用前请自行检查远程资源是否仍然有效，并根据自己的节点、软件版本和网络环境进行调整。
 
+## 规则和资源来源
+
+### 核心规则仓库
+
+- [Repcz/Tool](https://github.com/Repcz/Tool)：提供 Egern 配置主体，以及 Direct、Reject、AI、Telegram、Twitter、Facebook、TikTok、Game、Google、Github、Microsoft、Emby、Spotify、Bahamut、Netflix、Disney、PrimeVideo、HBO、Proxy、AppleServers、Lan 等规则。
+- [Repcz/EgernRules](https://github.com/Repcz/EgernRules)：提供独立的 [YouTube 规则](https://github.com/Repcz/EgernRules/blob/X/Rules/YouTube/YouTube.yaml) 和 [Gemini 规则](https://github.com/Repcz/EgernRules/blob/X/Rules/Gemini/Gemini.yaml)。
+
+### 配置中引用的其他项目
+
+- [Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)：提供 GeoIP 和 ASN 数据库。
+- [Koolson/Qure](https://github.com/Koolson/Qure)：提供策略组图标资源。
+- [Orz-3/mini](https://github.com/Orz-3/mini)：提供 AI 图标资源。
+- [Repcz/Repcz.github.io](https://github.com/Repcz/Repcz.github.io)：提供 Egern 图标资源。
+- [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)：提供部分 Surge 模块。
+- [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)：提供 `XWebAds.module` 模块。
+- [Keywos/rule](https://github.com/Keywos/rule)：提供网易云相关模块。
+- [Maasea/sgmodule](https://github.com/Maasea/sgmodule)：提供 YouTube 增强模块。
+- [ConnersHua/RuleGo](https://github.com/ConnersHua/RuleGo)：提供广告拦截模块。
+- [githubdulong/Script](https://github.com/githubdulong/Script)：提供京东价格相关模块。
+- [ChavyWan/chavyleung/scripts](https://github.com/chavyleung/scripts)：提供 BoxJS 重写模块。
+- [kokoryh/Sparkle](https://github.com/kokoryh/Sparkle)：提供哔哩哔哩模块。
+- [xream/scripts](https://github.com/xream/scripts)：提供网络信息模块。
+- [001ProMax/Surge](https://github.com/001ProMax/Surge)：提供 Spotify 模块。
+- [sub-store-org/Sub-Store](https://github.com/sub-store-org/Sub-Store)：提供 Sub-Store 相关 Egern 配置入口。
+
+以上来源均为配置文件当前引用的远程项目。远程规则、模块、图标和数据库可能随上游项目变化、迁移或失效，本仓库不保证其长期可用性。
+
 ## 使用说明
 
 1. 根据所使用的代理软件进入对应目录。
