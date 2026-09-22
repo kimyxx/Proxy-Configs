@@ -9,7 +9,9 @@
 ```text
 .
 └── Egern/
-    └── Egern.yaml
+    ├── Egern.yaml
+    └── Rules/
+        └── Gemini.yaml
 ```
 
 ## 当前配置
@@ -20,10 +22,20 @@
 
 当前配置基于 Repcz 的 Egern 配置进行整理，并增加了独立的 YouTube 和 Gemini 分组：
 
-- `YouTube`：使用 Repcz/EgernRules 中的 YouTube 规则。
-- `Gemini`：使用 Repcz/EgernRules 中的 Gemini 规则。
-- `AI`、`Google`、`Streaming` 等原有分组继续保留。
-- YouTube 和 Gemini 规则放在通用 AI、Google 规则之前，以便优先匹配。
+- `YouTube`：使用 Repcz/EgernRules 中的 YouTube 规则，默认选择日本节点。
+- `Gemini`：使用本仓库整理的 Gemini 专用规则，默认选择美国节点。
+- `Google`：继续使用 Repcz/EgernRules 中的 Google 规则，默认选择日本节点。
+- `AI`、`Streaming` 等原有分组继续保留。
+- Gemini 规则放在通用 AI、Google 规则之前，以便优先匹配。
+- Google 共用的登录、通用 API 和用户内容域名没有全部划入 Gemini，避免普通 Google 流量误走美国。
+
+### 广告与模块
+
+- 保留 Repcz/EgernRules 的全局 `Reject.yaml`。
+- 保留 HTTPDNS 拦截模块。
+- 启用腾讯视频去广告模块。
+- 保留原有 YouTube Enhance 模块。
+- 其他 App 去广告、X、网易云、BoxJS、哔哩哔哩等模块暂时关闭。
 
 配置中引用的远程规则、模块和图标来自对应的原作者或开源项目。使用前请自行检查远程资源是否仍然有效，并根据自己的节点、软件版本和网络环境进行调整。
 
@@ -32,7 +44,8 @@
 ### 核心规则仓库
 
 - [Repcz/Tool](https://github.com/Repcz/Tool)：提供 Egern 配置主体，以及 Direct、Reject、AI、Telegram、Twitter、Facebook、TikTok、Game、Google、Github、Microsoft、Emby、Spotify、Bahamut、Netflix、Disney、PrimeVideo、HBO、Proxy、AppleServers、Lan 等规则。
-- [Repcz/EgernRules](https://github.com/Repcz/EgernRules)：提供独立的 [YouTube 规则](https://github.com/Repcz/EgernRules/blob/X/Rules/YouTube/YouTube.yaml) 和 [Gemini 规则](https://github.com/Repcz/EgernRules/blob/X/Rules/Gemini/Gemini.yaml)。
+- [Repcz/EgernRules](https://github.com/Repcz/EgernRules)：提供 YouTube、Google、Direct、Reject、China、Lan 以及其他服务规则。
+- [本仓库 Gemini 规则](Egern/Rules/Gemini.yaml)：在 Repcz Gemini 规则基础上，结合 Google DeepMind 和 Gemini 公开域名清单补充 Gemini、AI Studio、Generative Language API 及 Gemini Code Assist 相关专用域名。Google 共用域名未全部纳入。
 
 ### 配置中引用的其他项目
 
@@ -40,19 +53,14 @@
 - [Koolson/Qure](https://github.com/Koolson/Qure)：提供策略组图标资源。
 - [Orz-3/mini](https://github.com/Orz-3/mini)：提供 AI 图标资源。
 - [Repcz/Repcz.github.io](https://github.com/Repcz/Repcz.github.io)：提供 Egern 图标资源。
-- [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)：提供部分 Surge 模块。
-- [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)：提供 `XWebAds.module` 模块。
-- [Keywos/rule](https://github.com/Keywos/rule)：提供网易云相关模块。
+- [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)：提供 HTTPDNS、腾讯视频及其他 Surge 模块。
 - [Maasea/sgmodule](https://github.com/Maasea/sgmodule)：提供 YouTube 增强模块。
-- [ConnersHua/RuleGo](https://github.com/ConnersHua/RuleGo)：提供广告拦截模块。
-- [githubdulong/Script](https://github.com/githubdulong/Script)：提供京东价格相关模块。
-- [ChavyWan/chavyleung/scripts](https://github.com/chavyleung/scripts)：提供 BoxJS 重写模块。
-- [kokoryh/Sparkle](https://github.com/kokoryh/Sparkle)：提供哔哩哔哩模块。
-- [xream/scripts](https://github.com/xream/scripts)：提供网络信息模块。
-- [001ProMax/Surge](https://github.com/001ProMax/Surge)：提供 Spotify 模块。
+- [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)：提供 Google DeepMind 公开域名参考。
+- [liandu2024/clash](https://github.com/liandu2024/clash)：提供 Gemini 公开域名参考。
+- [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)：提供部分脚本和模块来源。
 - [sub-store-org/Sub-Store](https://github.com/sub-store-org/Sub-Store)：提供 Sub-Store 相关 Egern 配置入口。
 
-以上来源均为配置文件当前引用的远程项目。远程规则、模块、图标和数据库可能随上游项目变化、迁移或失效，本仓库不保证其长期可用性。
+以上来源均为配置文件当前引用或规则整理时参考的远程项目。远程规则、模块、图标和数据库可能随上游项目变化、迁移或失效，本仓库不保证其长期可用性。
 
 ## 使用说明
 
