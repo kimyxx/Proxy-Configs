@@ -1,0 +1,39 @@
+# 规则名称: Gemini（本仓库整理版）
+# 规则来源:
+# - https://github.com/Repcz/EgernRules/blob/X/Rules/Gemini/Gemini.yaml
+# - https://github.com/v2fly/domain-list-community/blob/master/data/google-deepmind
+# - https://github.com/liandu2024/clash/blob/6e13f3ede7ba2a2d8bf9544901733a4203abe387/list/Gemini.list
+#
+# 仅收录 Gemini、Google AI Studio 及 Gemini 相关接口的专用域名。
+# accounts.google.com、apis.google.com、googleapis.com、googleusercontent.com、
+# android.googleapis.com 等 Google 共用域名没有放入这里，避免普通 Google 流量误走美国。
+
+domain_set:
+  - ai.google.dev
+  - ai.studio
+  - aisandbox-pa.googleapis.com
+  - aistudio-pa.clients6.google.com
+  - aistudio.google.com
+  - alkalicore-pa.clients6.google.com
+  - alkalimakersuite-pa.clients6.google.com
+  - cloudaicompanion.googleapis.com
+  - cloudcode-pa.googleapis.com
+  - daily-cloudcode-pa.googleapis.com
+  - geller-pa.googleapis.com
+  - gemini-pa.googleapis.com
+  - generativelanguage.googleapis.com
+  - webchannel-alkalimakersuite-pa.clients6.google.com
+
+domain_suffix_set:
+  - aicode.googleapis.com
+  - aida.googleapis.com
+  - bard.google.com
+  - deepmind.com
+  - deepmind.google
+  - generativeai.google
+  - gemini.google
+  - gemini.google.com
+  - gemini.gstatic.com
+  - makersuite.google.com
+  - proactivebackend-pa.googleapis.com
+  - robinfrontend-pa.googleapis.com
