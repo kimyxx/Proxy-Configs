@@ -41,7 +41,7 @@ dns:
       disabled: false
   - domain_wildcard:
       match: '*'
-      value: Domestic-Encrypted-DNS
+      value: Foreign-Encrypted-DNS
       disabled: false
   hosts:
     dns.google:
