@@ -122,16 +122,6 @@ policy_groups:
     - Taiwan
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 - select:
-    name: Google
-    policies:
-    - Japan
-    - Manual
-    - HongKong
-    - United States
-    - Singapore
-    - Taiwan
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-- select:
     name: Gemini
     policies:
     - United States
@@ -141,6 +131,16 @@ policy_groups:
     - Japan
     - Taiwan
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png
+- select:
+    name: Google
+    policies:
+    - Japan
+    - Manual
+    - HongKong
+    - United States
+    - Singapore
+    - Taiwan
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 - select:
     name: AI
     policies:
@@ -207,45 +207,40 @@ policy_groups:
     - Japan
     - Taiwan
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-- auto_test:
+- select:
     name: HongKong
     policies:
     - Manual
     flatten: true
     filter: (?i)🇭🇰|香港|(\b(HK|Hong)\b)
-    tolerance: 0
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-- auto_test:
+- select:
     name: United States
     policies:
     - Manual
     flatten: true
     filter: (?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)
-    tolerance: 0
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-- auto_test:
+- select:
     name: Singapore
     policies:
     - Manual
     flatten: true
     filter: (?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
-    tolerance: 0
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-- auto_test:
+- select:
     name: Japan
     policies:
     - Manual
     flatten: true
     filter: (?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)
-    tolerance: 0
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-- auto_test:
+- select:
     name: Taiwan
     policies:
     - Manual
     flatten: true
     filter: (?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
-    tolerance: 0
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rules:
 - rule_set:
