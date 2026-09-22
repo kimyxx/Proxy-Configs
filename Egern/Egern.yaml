@@ -32,11 +32,11 @@ dns:
     - https://dns.google/dns-query
   forward:
   - proxy_rule_set:
-      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Reject/Reject.yaml
+      match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Reject.yaml
       value: REJECT
       disabled: false
   - proxy_rule_set:
-      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/China/China.yaml
+      match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/ChinaDomain.yaml
       value: Domestic-DNS
       disabled: false
   - domain_wildcard:
@@ -80,7 +80,7 @@ policy_groups:
     urls:
     - http://your-service-provider
     hidden: false
-    icon: https://github.com/Repcz/Repcz.github.io/raw/main/docs/egern/Photo/Egern.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 - select:
     name: Global
     policies:
@@ -140,7 +140,7 @@ policy_groups:
     - Singapore
     - Japan
     - Taiwan
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Gemini.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png
 - select:
     name: AI
     policies:
@@ -253,7 +253,7 @@ rules:
     policy: DIRECT
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Reject/Reject.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Reject.yaml
     policy: REJECT
     update_interval: 86400
 - rule_set:
@@ -281,7 +281,7 @@ rules:
     policy: AI
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Telegram/Telegram.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Telegram.yaml
     policy: Telegram
     update_interval: 86400
 - and:
@@ -290,21 +290,21 @@ rules:
     - not:
         match:
           rule_set:
-            match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Telegram/Telegram.yaml
+            match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Telegram.yaml
     - listen_port:
         match: '6153'
     policy: REJECT
     disabled: false
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Twitter/Twitter.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Twitter.yaml
     policy: Social
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Facebook/Facebook.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Facebook.yaml
     policy: Social
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/TikTok/TikTok.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/TikTok.yaml
     policy: Social
     update_interval: 86400
 - rule_set:
@@ -324,7 +324,7 @@ rules:
     policy: Microsoft
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Emby/Emby.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Emby.yaml
     policy: Emby
     update_interval: 86400
 - rule_set:
@@ -352,11 +352,11 @@ rules:
     policy: Streaming
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Proxy/Proxy.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Proxy.yaml
     policy: Global
     update_interval: 86400
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/AppleServers.yaml
     policy: HongKong
     update_interval: 86400
 - rule_set:
